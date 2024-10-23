@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecciona tu banda favorita</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+            margin-top: 50px;
+        }
+        select {
+            font-size: 16px;
+            padding: 10px;
+            margin: 20px;
+        }
+        h2 {
+            color: #333;
+        }
+    </style>
+    <script>
+        function mostrarSeleccion() {
+            var seleccion = document.getElementById("artistas").value;
+            var mensaje = "¡Te gusta " + seleccion + "!";
+            document.getElementById("mensaje").innerText = mensaje;
+        }
+    </script>
+</head>
+<body>
+    <h2>Selecciona tu banda o artista favorito</h2>
+    <select id="artistas" onchange="mostrarSeleccion()">
+        <option value="">--Selecciona una banda o artista--</option>
+        <option value="The Beatles">The Beatles</option>
+        <option value="Queen">Queen</option>
+        <option value="Pink Floyd">Pink Floyd</option>
+        <option value="Metallica">Metallica</option>
+        <option value="Nirvana">Nirvana</option>
+        <option value="Led Zeppelin">Led Zeppelin</option>
+        <option value="Radiohead">Radiohead</option>
+        <!-- Puedes agregar más bandas aquí -->
+    </select>
+    <p id="mensaje" style="font-size:18px; color: #555;"></p>
+</body>
+</html>
